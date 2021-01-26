@@ -1,8 +1,5 @@
 export default {
-  mode: 'universal',
-  /*
-   ** Headers of the page
-   */
+
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -56,11 +53,51 @@ export default {
     port: 8000,
   },
   i18n: {
-    locales: ['en', 'id'],
-    defaultLocale: 'en',
+    locales: ['es','en', 'id'],
+    defaultLocale: 'es',
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'es',
       messages: {
+        es: {
+          welcome: 'Bienvenido',
+          title: 'Piedra Papel Tijera',
+          subtitle: 'Con inteligencia Artificial',
+
+          gameStart: 'Empezar a jugar',
+          youWin: 'Ganaste',
+          youLose: 'Perdiste',
+          draw: 'Draw',
+
+          score: 'Puntuacion',
+          human: 'Humano',
+          ai: 'IA',
+          rock: 'Piedra',
+          paper: 'Papel',
+          scissors: 'Tijera',
+          reset: 'Reiniciar',
+          gameCount: 'Ronda',
+
+          what: 'Que es esto?',
+          thisIs:
+            'Estes es un juego de piedra papel tijeras creado con inteligencia artificial.',
+          thisGame:
+            "Este juego puede aprender de los patrones de los jugadores para determinar los pasos que la inteligencia artificial debe tomar para ganar.",
+          builtWith: 'Construido con Nuxt JS y el marco de trabajo Tailwind CSS.',
+
+          how: 'Como jugar',
+          step1: 'Tu puedes iniciar el juego seleccionando "piedra", "tijera" o "papel".',
+          step2: 'Mientras selecciones crearas un patron.',
+          step3: 'Ejemplos de patrones:',
+          pattern1: 'piedra, piedra, piedra, piedra, etc.',
+          pattern2: 'piedra, tijera, piedra, tijera, etc.',
+          pattern3: 'piedra, tijera, papel, piedra, tijera, papel, etc.',
+          pattern4: 'papel, papel, papel, papel, etc.',
+          step4: 'Mira eso tu perderas.',
+
+          source: 'Codifo fuente',
+          brainjs: 'Contruido con la libreria',
+          github: 'Obten este codigo en'
+        },
         en: {
           welcome: 'Welcome',
           title: 'Rock Paper Scissors',

@@ -1,8 +1,8 @@
 {
-  "name": "batu-gunting-kertas-nuxt",
+  "name": "piedra-papel-tijera-nuxt",
   "version": "1.0.0",
-  "description": "Permainan Batu Gunting Kertas menggunakan kecerdasan buatan dengan memprediksi nomor yang akan muncul berdasarkan pola.",
-  "author": "Arif Ikhsanudin",
+  "description": "piedra papel tijera usando brain.js.",
+  "author": "Grover Plaza Quiroga",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -20,6 +20,11 @@
     "@nuxtjs/tailwindcss": "^2.0.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "fibers": "^5.0.0",
+    "prettier": "^1.19.1",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1"
   }
 }
