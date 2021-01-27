@@ -1,20 +1,24 @@
-# Rock Paper Scissors Game with Artificial Intellegence
+# El juego de Piedra Papel Tijera usando Inteligencia Artificial
 
-> Demo
+# :punch: vs :raised_hand: vs :v:
 
-http://rockpaperscissors-ai.now.sh/
+## Por que usar inteligencia Artificial?
 
-## What is this?
+Porque si :joy:. Veran Brain.js es una libreria que en palabras simples usa redes neuronales, estas redes son aceleradas por la libreria GPU.js
 
-This is a paper scissors rock game created using artificial intelligence.  
+### Que es GUP.js?
+Es una biblioteca de aceleración de JavaScript para GPGPU. en palabras simples transpila automáticamente funciones simples de JavaScript en un lenguaje de sombreado y las compila para que se ejecuten en su GPU. :joy:
 
-This game can read the players' patterns to determine the steps the AI will take in order to win.  
+El juego puede leer los patrones de los jugadores para determinar los pasos que tomará la IA para ganar.
 
-Built with Nuxt JS & Tailwind CSS framework.  
+Fue Contruido con las siguientes tecnologias:
+
+  - ## Nuxt.js
+  - ## Brain.js
+  - ## Pug.js
+  - ## Tailwindcss
 
 ## Screensot
-
-![image](https://user-images.githubusercontent.com/32485694/90313106-085fa200-df34-11ea-956c-b22986cc01e1.png)
 
 ## How to play?
 
@@ -32,6 +36,19 @@ Built with Nuxt JS & Tailwind CSS framework.
 ```bash
 # install dependencies
 $ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 # serve with hot reload at localhost:3000
 $ yarn dev
