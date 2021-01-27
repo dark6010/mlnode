@@ -4,34 +4,38 @@
 
 ## Por que usar inteligencia Artificial?
 
-Porque si :joy:. Veran Brain.js es una libreria que en palabras simples usa redes neuronales, estas redes son aceleradas por la libreria GPU.js
+Porque si :joy:. Quisimos probar la IA en un juego y resulta que nos encotramos una interesante libreria que esta descrita acontinuacion:
 
-### Que es GUP.js?
-Es una biblioteca de aceleración de JavaScript para GPGPU. en palabras simples transpila automáticamente funciones simples de JavaScript en un lenguaje de sombreado y las compila para que se ejecuten en su GPU. :joy:
+Brain.js es una libreria que en palabras simples hace uso de redes neuronales aceleradas por GPU en JavaScript, para conocer mas a detalle ver: [brain.js](https://brain.js.org/).
+
+### Que es GPU?
+
+Para un gamer es su tesoro mas preciado. para los mortales es la (Unidad de Procesamiento Grafico). ya habiendo repasado los conceptos basicos pues nos queda decir que Brain.js realiza cálculos utilizando GPU y recurre con elegancia a JavaScript puro cuando la GPU no está disponible. si quieres saber como es que que lo hace de manera elegante revisa el siguinete link: [GPU.js](https://github.com/gpujs/gpu.js/#readme).
+
+## Lo que nos importa
 
 El juego puede leer los patrones de los jugadores para determinar los pasos que tomará la IA para ganar.
 
-Fue Contruido con las siguientes tecnologias:
+## Como jugar?
 
-  - ## Nuxt.js
-  - ## Brain.js
-  - ## Pug.js
-  - ## Tailwindcss
+1. Inicia el juego selecionando los botones de Piedra, Papel o Tijera.
+2. A medida que seleciones los botones se crearan patrones:
+    - :punch: :punch: :punch:,ect
+    - :raised_hand: :punch: :punch:,etc
+    - :v: :punch: :raised_hand:, etc
+    - y continuas con las posibles convinaciones.
+3. Continua jugando y dejanos saber si puedes ganar. :grin:
 
-## Screensot
+El juego fue contruido con las siguientes tecnologias:
 
-## How to play?
+  - Nuxt.js
+  - Brain.js
+  - Pug.js
+  - Tailwindcss
 
-1. You can start the game by selecting "rock", "scissors" or "paper".
-2. Choose continuously until you create a pattern.
-3. Examples of patterns:
-    - Rock, rock, rock, rock, etc.
-    - Rock, scissors, rock, scissors, etc.
-    - Rock, scissors, paper, rock, scissors, paper, etc.
-    - Paper, paper, paper, paper, etc.
-4. See that you will lose.
+## Levanta el Proyecto
 
-## Build setup
+Y ponte a Jugar
 
 ```bash
 # install dependencies
@@ -39,13 +43,5 @@ $ yarn install
 
 # serve with hot reload at localhost:3000
 $ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Para mas detalles sobre Nuxt dirigete al siguiente link [Nuxt.js docs](https://nuxtjs.org).
