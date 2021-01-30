@@ -19,10 +19,11 @@
 </template>
 
 <script>
+import brain from 'brain.js/src'
 export default {
   head: {
-    title: 'Rock Paper Scissors with AI',
-    script: [{ src: '//unpkg.com/brain.js' }]
+    title: 'Funcion xor'
+    // script: [{ src: '//unpkg.com/brain.js' }]
   },
   data() {
     return {

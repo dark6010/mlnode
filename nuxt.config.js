@@ -50,7 +50,7 @@ export default {
     }
   },
   server: {
-    port: 8000,
+    port: 80,
   },
   i18n: {
     locales: ['es','en', 'id'],

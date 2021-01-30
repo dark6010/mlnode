@@ -21,7 +21,7 @@
 <script>
 export default {
   head: {
-    title: 'Rock Paper Scissors with AI',
+    title: 'Detector simple de letras',
     script: [{ src: '//unpkg.com/brain.js' }]
   },
   data() {
