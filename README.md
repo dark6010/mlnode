@@ -45,3 +45,7 @@ $ yarn install
 $ yarn dev
 ```
 Para mas detalles sobre Nuxt dirigete al siguiente link [Nuxt.js docs](https://nuxtjs.org).
+
+## diapositivas
+
+[Aqui](http://iabo.herokuapp.com/).
