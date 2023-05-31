@@ -33,6 +33,8 @@
               | {{ $t('paper') }}
             button.px-4.py-2.m-2.text-white.duration-500.bg-indigo-500.rounded(@click='humanInput(3)' class='hover:bg-indigo-600')
               | {{ $t('scissors') }}
+            button.px-4.py-2.m-2.text-white.duration-500.bg-indigo-500.rounded(@click='whatShouldAIAnswer(false)' class='hover:bg-indigo-600')
+              | que escojeras
           div
             button.px-4.py-2.m-2.text-indigo-500.border.rounded(@click='resetScore')
               | {{ $t('reset') }}
@@ -82,9 +84,9 @@ export default {
       this.whoIsTheWinner()
     },
     prepareData() {
-      console.log('prepare data')
+      console.log('preparando Datos')
       if (this.pattern.length < 1) {
-        console.log('prepare data enter 1')
+        console.log('creando datos primera vez')
         for (let index = 1; index <= this.patternLength; index++) {
           this.pattern.push(Math.floor(Math.random() * 3) + 1)
         }
@@ -96,16 +98,23 @@ export default {
         this.pattern.push(this.chosenByHuman)
       }
     },
-    async whatShouldAIAnswer() {
+    async whatShouldAIAnswer(a=true) {
       this.prepareData()
+      console.log(this.pattern)
       const net = new brain.recurrent.LSTMTimeStep()
       net.train([this.pattern], { iterations: 100, log: true })
       const humanWillChose = net.run(this.pattern)
       console.log(humanWillChose)
+      if(a)
       this.updatePattern()
 
+
       const roundedHumanWillChose = Math.round(humanWillChose)
-      console.log('human will chose: ' + roundedHumanWillChose)
+      const textShow = {1: 'piedra', 2:'papel', 3:'tijera'}
+      if(!a)
+      console.log('la persona escogera: ' + textShow[roundedHumanWillChose])
+      else
+      console.log('la persona escogera: ' + textShow[roundedHumanWillChose])
       this.chosenByAI = 1 <= roundedHumanWillChose && roundedHumanWillChose <= 3 ? (roundedHumanWillChose % 3) + 1 : 1
     },
     whoIsTheWinner() {

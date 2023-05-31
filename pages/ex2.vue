@@ -1,6 +1,6 @@
 <template lang="pug">
   div.p-4
-    h2.text-center SIMPLE LETTER DETECTION
+    h2.text-center DETECCION DE LETRA SIMPLE
     .grid.grid-cols-3
       small
         b Entrenamiento
@@ -11,7 +11,7 @@
         pre
           code {{test}}
       small
-        b output
+        b salida
         pre
           code {{output}}
 

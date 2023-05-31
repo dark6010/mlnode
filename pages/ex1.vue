@@ -1,6 +1,6 @@
 <template lang="pug">
   div.p-4
-    h2.text-center XOR FUNCTION
+    h2.text-center FUNCIÓN XOR
     .grid.grid-cols-3
       small
         b Entrenamiento
@@ -11,7 +11,7 @@
         pre
           code {{test}}
       small
-        b output
+        b salida
         pre
           code {{output}}
 
@@ -19,11 +19,11 @@
 </template>
 
 <script>
-import brain from 'brain.js/dist'
+//import brain from 'brain.js/dist'
 export default {
   head: {
-    title: 'Funcion xor'
-    // script: [{ src: '//unpkg.com/brain.js' }]
+    title: 'Funcion xor',
+    script: [{ src: '//unpkg.com/brain.js' }]
   },
   data() {
     return {
@@ -55,7 +55,7 @@ export default {
       hiddenLayers: [3], // array of ints for the sizes of the hidden layers in the network
       activation: 'sigmoid' // supported activation types: ['sigmoid', 'relu', 'leaky-relu', 'tanh']
     };
-
+    console.log(brain)
     // create a simple feed forward neural network with backpropagation
     const net = new brain.NeuralNetwork(config);
     net.train(this.arrayToTrain);

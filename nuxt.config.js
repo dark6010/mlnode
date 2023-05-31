@@ -66,7 +66,7 @@ export default {
           gameStart: 'Empezar a jugar',
           youWin: 'Ganaste',
           youLose: 'Perdiste',
-          draw: 'Draw',
+          draw: 'Empate',
 
           score: 'Puntuacion',
           human: 'Humano',

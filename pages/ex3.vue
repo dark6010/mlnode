@@ -1,17 +1,17 @@
 <template lang="pug">
   div.p-4
-    h2.text-center CHILDRENS BOOK
+    h2.text-center LBRO DE NIÑOS
     .grid.grid-cols-3
       small
         b Entrenamiento
-        pre {{arrayToTrain}}
+        pre(v-for="(val,index) in arrayToTrain" :key="index") - {{val}}
+      small
+        b salida
+
+        pre(v-for="(val, index) in output" :key="index") corrida {{index+1}}: {{iterations[index]+val}}
       small
         b test iterations
         pre {{iterations}}
-      small
-        b output
-
-        pre(v-for="(val, index) in output" :key="index") run {{index+1}} {{iterations[index]+val}}
 
 
 </template>
@@ -25,16 +25,18 @@ export default {
   data() {
     return {
       arrayToTrain: [
-        'Jane saw Doug.',
-        'Doug saw Jane.',
-        'Spot saw Doug and Jane looking at each other.',
-        'It was love at first sight, and Spot had a frontrow seat. It was a very special moment for all.'
+        'La gallina vio a el aguila.',
+        'El lobo vio a la gallina.',
+        'El aguila vio a el lobo y la gallina mirándose.',
+        'Eso fue amor a primera vista, y el aguila tenía bellas plumas. Eso fue un momento muy agradable para todos.',
+        'Celeste vio a el aguila.'
       ],
       iterations:[
-        'Jane',
-        'Soug',
-        'Spot',
-        'It',
+        'La gallina',
+        'El lobo',
+        'El aguila',
+        'Eso',
+        'Celeste'
       ],
       output:[]
     }
@@ -43,9 +45,9 @@ export default {
 
     const lstm = new brain.recurrent.LSTM();
     const result = lstm.train(this.arrayToTrain, {
-      iterations: 1500,
+      iterations: 1200,
       log: details => console.log(details),
-      errorThresh: 0.011
+      errorThresh: 0.012
     });
     this.iterations.forEach((val, index) => {
       this.output.push(lstm.run(val))
