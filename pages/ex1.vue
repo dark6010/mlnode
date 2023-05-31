@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import brain from 'brain.js/src'
+import brain from 'brain.js/dist'
 export default {
   head: {
     title: 'Funcion xor'
